@@ -14,7 +14,7 @@ class HiveService {
     final openBox = await Hive.openBox<PictureModel>('pictureHive');
     int length = openBox.length;
     for (int i = 0; i < length; i++) {
-      boxList.add(openBox.getAt(i)!);
+      boxList.add(openBox.getAt(i) as PictureModel);
     }
     return boxList;
   }

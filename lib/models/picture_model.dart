@@ -29,8 +29,8 @@ class PictureModel {
   @HiveField(4)
   String? thumbnailUrl;
 
-  APIService apiService = new APIService();
-  HiveService hiveService = new HiveService();
+  APIService apiService =  APIService();
+  HiveService hiveService =  HiveService();
   List<PictureModel> pictures = [];
   List<PictureModel> get pictureList => pictures;
 

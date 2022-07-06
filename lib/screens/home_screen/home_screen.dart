@@ -8,7 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 const String picHiveModel = 'pictureHive';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -36,10 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
             if (snapshot.hasData) {
               return pictureHiveBoxListener();
             }
-            return const SizedBox(
-                height: 50,
-                width: 50,
-                child: Center(child: CircularProgressIndicator()));
+            return const Center(
+              child:  SizedBox(
+                  height: 50,
+                  width: 50,
+                  child: CircularProgressIndicator(color:Colors.blueGrey)),
+            );
           }),
     );
   }
