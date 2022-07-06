@@ -3,8 +3,6 @@ import 'package:offline_persistancy_hive/models/picture_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 
-
-
 const String picHiveModel = 'pictureHive';
 
 class HomeScreen extends StatefulWidget {
